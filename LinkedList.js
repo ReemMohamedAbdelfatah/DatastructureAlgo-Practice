@@ -44,5 +44,18 @@ function LinkedList () {
     }
     length--
   }
+  this.IndexOf  = function(element){
+    var currentNode = head;
+    var index = -1;
+     while(currentNode){
+      index ++;
+      if(currentNode.element === element)
+      {
+        return index;
+      }
+      currentNode = currentNode.next;
+     }
+     return -1;
+  }
 
 }

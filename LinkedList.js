@@ -44,6 +44,7 @@ function LinkedList () {
     }
     length--
   }
+
   this.IndexOf  = function(element){
     var currentNode = head;
     var index = -1;
@@ -58,4 +59,33 @@ function LinkedList () {
      return -1;
   }
 
+  this.ElementAt = function(index){
+    var currentNode = head;
+    counter = 0;
+    if (index > this.size() || index < 0){
+      return -1
+    }
+
+    while (counter < index){
+      counter ++
+      currentNode = currentNode.next
+    }
+    return currentNode.element
+  }
+
 }
+
+var fruits = new LinkedList()
+fruits.add('mangoe')
+fruits.add('water-melon')
+fruits.add('orange')
+fruits.add('dates')
+
+console.log(fruits.size())
+fruits.remove('mangoe')
+console.log(fruits.size())
+console.log(fruits.IndexOf('mangoe'))
+console.log(fruits.IndexOf('dates'))
+console.log(fruits.ElementAt(1))
+
+

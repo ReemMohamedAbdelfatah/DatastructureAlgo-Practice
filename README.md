@@ -1,2 +1,2 @@
 # Datastructure-Practice
-Practice data structures in javascript 
+Practice data structures and Algorithms in javascript 
